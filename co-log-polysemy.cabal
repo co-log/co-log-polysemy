@@ -15,8 +15,8 @@ description:
     .
     * [co-log](http://hackage.haskell.org/package/co-log)
 
-homepage:            https://github.com/kowainik/co-log
-bug-reports:         https://github.com/kowainik/co-log/issues
+homepage:            https://github.com/co-log/co-log-polysemy
+bug-reports:         https://github.com/co-log/co-log-polysemy/issues
 license:             MPL-2.0
 license-file:        LICENSE
 author:              Dmitrii Kovanikov
@@ -29,20 +29,16 @@ extra-doc-files:     CHANGELOG.md
                      README.md
 tested-with:         GHC == 8.4.4
                      GHC == 8.6.5
-                     GHC == 8.8.3
-                     GHC == 8.10.1
+                     GHC == 8.8.4
+                     GHC == 8.10.7
                      GHC == 9.0.1
 
 source-repository head
   type:                git
-  location:            https://github.com/kowainik/co-log.git
+  location:            https://github.com/co-log/co-log-polysemy.git
 
 common common-options
-  build-depends:       base >= 4.10.1.0 && < 4.16
-
-  -- 8.2 lacks <>
-  if impl(ghc < 8.4)
-    buildable: False
+  build-depends:       base >= 4.11 && < 4.16
 
   ghc-options:         -O2
                        -Wall
@@ -90,7 +86,7 @@ library
   exposed-modules:     Colog.Polysemy
                            Colog.Polysemy.Effect
 
-  build-depends:       co-log-core ^>= 0.2.0.0
+  build-depends:       co-log-core ^>= 0.3.0.0
                      , polysemy >= 1.2.0.0 && < 1.7
 
 executable play-colog-poly
