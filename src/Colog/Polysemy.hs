@@ -1,7 +1,11 @@
 {- |
-Copyright:  (c) 2019-2020 Kowainik
-SPDX-License-Identifier: MPL-2.0
-Maintainer: Kowainik <xrom.xkov@gmail.com>
+Module                  : Colog.Polysemy
+Copyright               : (c) 2019-2020 Kowainik
+                          (c) 2021 Co-Log
+SPDX-License-Identifier : MPL-2.0
+Maintainer              : Co-Log <xrom.xkov@gmail.com>
+Stability               : Provisional
+Portability             : Portable
 
 This package contains extensible effects implementation of composable, contravariant and
 comonadic logging based on @co-log-core@ and @polysemy@.

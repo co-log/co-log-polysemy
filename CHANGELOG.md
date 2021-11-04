@@ -3,11 +3,12 @@
 `co-log-polysemy` uses [PVP Versioning][1].
 The changelog is available [on GitHub][2].
 
-## 0.0.1.3 — <M> <d>, 2021
+## 0.0.1.3 — Nov 2, 2021
 
 * [#223](https://github.com/kowainik/co-log/pulls/223):
   Support GHC-9.0.1.
-  Allow `polysemy-1.6.0.0`.
+* Allow `polysemy-1.6.0.0`.
+* Bump up lower bound for `co-log-core` to `0.3.0.0`.
 
 ## 0.0.1.2 — Apr 18, 2020
 
