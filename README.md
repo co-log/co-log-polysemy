@@ -2,7 +2,7 @@
 
 ![Co-logo](https://user-images.githubusercontent.com/8126674/80955687-92f21a80-8df7-11ea-90d3-422dafdc8391.png)
 
-[![GitHub CI](https://github.com/kowainik/co-log/workflows/CI/badge.svg)](https://github.com/kowainik/co-log/actions)
+[![GitHub CI](https://github.com/co-log/co-log-polysemy/workflows/CI/badge.svg)](https://github.com/co-log/co-log-polysemy/actions)
 [![Hackage][hk-img-ps]][hk-ps]
 [![MPL-2.0 license](https://img.shields.io/badge/license-MPL--2.0-blue.svg)](https://github.com/kowainik/co-log/blob/main/LICENSE)
 
@@ -11,16 +11,11 @@
 the [polysemy](http://hackage.haskell.org/package/polysemy) extensible 
 effects library.
 
-## Goals
-
-We created the `co-log-polysemy` project in pursuit of the following goals:
-
-## Features
 
 ## How to use
 
-`co-log-polysemy` is compatible with the GHC compiler
-versions starting from `8.4.4` upto `9.0.1`.
+`co-log-polysemy` is compatible with the following GHC
+versions - [supported versions](https://matrix.hackage.haskell.org/#/package/co-log-polysemy)
 
 In order to start using `co-log-polysemy` in your project, you
 will need to set it up with the these easy steps:
@@ -31,18 +26,32 @@ will need to set it up with the these easy steps:
    this section could look like this:
 
    ```haskell
-   build-depends: base >= 4.11 && < 4.16
-                , co-log-polysemy ^>= 0.0.1.3
+   build-depends: base ^>= LATEST_SUPPORTED_BASE
+                , co-log-polysemy ^>= LATEST_VERSION
    ```
 
-2. To use the module add the import:
+2. To use the library, refer to the below example 
 
    ```haskell
-   import Colog.Polysemy
+   module Main (main) where
+
+   import Prelude hiding (log)
+
+   import Polysemy (Member, Sem, runM)
+
+   import Colog.Core.IO (logStringStdout)
+   import Colog.Polysemy (Log, log, runLogAction)
+
+
+   example :: Member (Log String) r => Sem r ()
+   example = do
+        log @String "First message..."
+        log @String "Second message..."
+
+   main :: IO ()
+   main = runM $ runLogAction @IO logStringStdout example
    ```
 
-## Comparison to other libraries
 
-## Acknowledgement
-
-
+[hk-img-ps]: https://img.shields.io/hackage/v/co-log-polysemy.svg?logo=haskell
+[hk-ps]: https://hackage.haskell.org/package/co-log-polysemy
