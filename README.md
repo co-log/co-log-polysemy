@@ -18,19 +18,19 @@ effects library.
 versions - [supported versions](https://matrix.hackage.haskell.org/#/package/co-log-polysemy)
 
 In order to start using `co-log-polysemy` in your project, you
-will need to set it up with the these easy steps:
+will need to set it up with these easy steps:
 
 1. Add the dependency on `co-log-polysemy` in your project's
    `.cabal` file. For this, you should modify the `build-depends`
-   section by adding the name of this library. After the adjustment,
-   this section could look like this:
+   section according to the below section:
 
    ```haskell
    build-depends: base ^>= LATEST_SUPPORTED_BASE
-                , co-log-polysemy ^>= LATEST_VERSION
+                , co-log-core ^>= LATEST_VERSION
+                , polysemy ^>= LATEST_VERSION
    ```
 
-2. To use the library, refer to the below example 
+2. To use this package, refer to the below example 
 
    ```haskell
    module Main (main) where
