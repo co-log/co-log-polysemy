@@ -31,14 +31,15 @@ tested-with:         GHC == 8.4.4
                      GHC == 8.6.5
                      GHC == 8.8.4
                      GHC == 8.10.7
-                     GHC == 9.0.1
+                     GHC == 9.0.2
+                     GHC == 9.2.3
 
 source-repository head
   type:                git
   location:            https://github.com/co-log/co-log-polysemy.git
 
 common common-options
-  build-depends:       base >= 4.11 && < 4.16
+  build-depends:       base >= 4.11 && < 4.17
 
   ghc-options:         -O2
                        -Wall
@@ -56,6 +57,11 @@ common common-options
     ghc-options:       -Wmissing-deriving-strategies
   if impl(ghc >= 8.10)
     ghc-options:       -Wunused-packages
+  if impl(ghc >= 9.0)
+    ghc-options:       -Winvalid-haddock
+  if impl(ghc >= 9.2)
+    ghc-options:       -Wredundant-bang-patterns
+                       -Woperator-whitespace
 
   -- special options to make @polysemy@ fast
   if impl(ghc >= 8.6)
