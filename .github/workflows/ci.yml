@@ -23,12 +23,12 @@ jobs:
           - "8.8.4"
           - "8.10.7"
           - "9.0.2"
-          - "9.2.5"
+          - "9.2.8"
           - "9.4.5"
           - "9.6.2"
         exclude:
           - os: macOS-latest
-            ghc: 9.2.5
+            ghc: 9.2.8
           - os: macOS-latest
             ghc: 9.0.2
           - os: macOS-latest
@@ -43,7 +43,7 @@ jobs:
             ghc: 8.2.2
 
           - os: windows-latest
-            ghc: 9.2.5
+            ghc: 9.2.8
           - os: windows-latest
             ghc: 9.0.2
           - os: windows-latest
@@ -93,5 +93,6 @@ jobs:
         cabal test all
 
     - name: Documentation
+      if: ${{ contains(fromJSON('["9.4.5", "9.6.2"]'), matrix.ghc) }}
       run: |
         cabal haddock
