@@ -16,33 +16,46 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macOS-latest, windows-latest]
-        cabal: ["3.6.2.0"]
+        cabal: ["3.10.1.0"]
         ghc:
           - "8.4.4"
           - "8.6.5"
           - "8.8.4"
           - "8.10.7"
           - "9.0.2"
-          - "9.2.3"
+          - "9.2.8"
+          - "9.4.7"
+          - "9.6.2"
         exclude:
           - os: macOS-latest
+            ghc: 9.2.8
+          - os: macOS-latest
             ghc: 9.0.2
+          - os: macOS-latest
+            ghc: 8.10.7
           - os: macOS-latest
             ghc: 8.8.4
           - os: macOS-latest
             ghc: 8.6.5
           - os: macOS-latest
             ghc: 8.4.4
+          - os: macOS-latest
+            ghc: 8.2.2
 
           - os: windows-latest
+            ghc: 9.2.8
+          - os: windows-latest
             ghc: 9.0.2
+          - os: windows-latest
+            ghc: 8.10.7
           - os: windows-latest
             ghc: 8.8.4
           - os: windows-latest
             ghc: 8.6.5
           - os: windows-latest
             ghc: 8.4.4
-
+          - os: windows-latest
+            ghc: 8.2.2
     steps:
     - uses: actions/checkout@v4
 
@@ -80,5 +93,6 @@ jobs:
         cabal test all
 
     - name: Documentation
+      if: ${{ contains(fromJSON('["9.4.7", "9.6.2"]'), matrix.ghc) }}
       run: |
         cabal haddock
