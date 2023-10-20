@@ -3,7 +3,7 @@
 {- |
 Module                  : Colog.Polysemy.Effect
 Copyright               : (c) 2019-2020 Kowainik
-                          (c) 2021 Co-Log
+                          (c) 2021-2023 Co-Log
 SPDX-License-Identifier : MPL-2.0
 Maintainer              : Co-Log <xrom.xkov@gmail.com>
 Stability               : Provisional

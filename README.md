@@ -4,7 +4,7 @@
 
 [![GitHub CI](https://github.com/co-log/co-log-polysemy/workflows/CI/badge.svg)](https://github.com/co-log/co-log-polysemy/actions)
 [![Hackage][hk-img-ps]][hk-ps]
-[![MPL-2.0 license](https://img.shields.io/badge/license-MPL--2.0-blue.svg)](https://github.com/kowainik/co-log/blob/main/LICENSE)
+[![MPL-2.0 license](https://img.shields.io/badge/license-MPL--2.0-blue.svg)](https://github.com/co-log/co-log/blob/main/LICENSE)
 
 `co-log-polysemy` package is a implementation of the 
 [co-log-core](http://hackage.haskell.org/package/co-log-core) logging based on 
