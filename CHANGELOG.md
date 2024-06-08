@@ -3,9 +3,18 @@
 `co-log-polysemy` uses [PVP Versioning][1].
 The changelog is available [on GitHub][2].
 
+## 0.0.1.5 - Jun 8, 2024
+
+### What's Changed
+* GA(deps): Bump actions/cache from 3 to 4 by @dependabot in https://github.com/co-log/co-log-polysemy/pull/23
+* Support ghc-9.10. by @alaendle in https://github.com/co-log/co-log-polysemy/pull/24
+
+
+**Full Changelog**: https://github.com/co-log/co-log-polysemy/compare/v0.0.1.4...v0.0.1.5
+
 ## 0.0.1.4 — Oct 20, 2023
 
-## What's Changed
+### What's Changed
 * update README.md by @udaycruise2903 in [#6](https://github.com/co-log/co-log-polysemy/pull/6)
 * modified 'build-depends' section in README.md by @udaycruise2903 in [#7](https://github.com/co-log/co-log-polysemy/pull/7)
 * GA(deps): Bump actions/checkout from 2 to 3 by @dependabot in [#9](https://github.com/co-log/co-log-polysemy/pull/9)
@@ -17,7 +26,7 @@ The changelog is available [on GitHub][2].
 * Support ghc-9.8 by @alaendle in [#20](https://github.com/co-log/co-log-polysemy/pull/20)
 * Publish to hackage directly from GitHub by @alaendle in [#21](https://github.com/co-log/co-log-polysemy/pull/21)
 
-## New Contributors
+### New Contributors
 * @udaycruise2903 made their first contribution in [#6](https://github.com/co-log/co-log-polysemy/pull/6)
 * @dependabot made their first contribution in [#9](https://github.com/co-log/co-log-polysemy/pull/9)
 * @alaendle made their first contribution in [#14](https://github.com/co-log/co-log-polysemy/pull/14)
