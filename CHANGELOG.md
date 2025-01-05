@@ -3,12 +3,18 @@
 `co-log-polysemy` uses [PVP Versioning][1].
 The changelog is available [on GitHub][2].
 
+## 0.0.1.6 - January 5, 2025
+
+### What's Changed
+* Support ghc-9.12
+
+**Full Changelog**: https://github.com/co-log/co-log-polysemy/compare/v0.0.1.5...v0.0.1.6
+
 ## 0.0.1.5 - Jun 8, 2024
 
 ### What's Changed
 * GA(deps): Bump actions/cache from 3 to 4 by @dependabot in https://github.com/co-log/co-log-polysemy/pull/23
 * Support ghc-9.10. by @alaendle in https://github.com/co-log/co-log-polysemy/pull/24
-
 
 **Full Changelog**: https://github.com/co-log/co-log-polysemy/compare/v0.0.1.4...v0.0.1.5
 
@@ -32,6 +38,7 @@ The changelog is available [on GitHub][2].
 * @alaendle made their first contribution in [#14](https://github.com/co-log/co-log-polysemy/pull/14)
 
 **Full Changelog**: https://github.com/co-log/co-log-polysemy/compare/v0.0.1.3...v0.0.1.4
+
 ## 0.0.1.3 — Nov 2, 2021
 
 * [#223](https://github.com/co-log/co-log/pulls/223):
