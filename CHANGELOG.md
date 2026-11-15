@@ -3,6 +3,14 @@
 `co-log-polysemy` uses [PVP Versioning][1].
 The changelog is available [on GitHub][2].
 
+## 0.0.1.7 - November 15, 2026
+
+### What's Changed
+
+* Support `ghc-9.14`.
+
+**Full Changelog**: https://github.com/co-log/co-log-polysemy/compare/v0.0.1.6...v0.0.1.7
+
 ## 0.0.1.6 - January 5, 2025
 
 ### What's Changed
